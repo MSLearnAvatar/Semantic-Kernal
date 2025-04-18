@@ -24,7 +24,7 @@ templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
-origins = ["https://lemon-coast-088235a0f.6.azurestaticapps.net"]
+origins = ["Your Azure static wep app"]
 
 app.add_middleware(
     CORSMiddleware,
@@ -54,14 +54,14 @@ SPEECH_REGION = os.getenv("SPEECH_REGION")
 RESOURCE_GROUP = os.getenv("RESOURCE_GROUP")
 PROJECT_NAME = os.getenv("PROJECT_NAME")
 MODEL_DEPLOYMENT_NAME = os.getenv("MODEL_DEPLOYMENT_NAME")
-PROJECT_CONN_STR = "swedencentral.api.azureml.ms;b850d62a-25fe-4d3a-9697-ea40449528a9;team8;8team-project-sweden"
+PROJECT_CONN_STR = "PROJECT_CONN_STR"
 
 # 에이전트 ID 정의
 AGENT_IDS = {
-    "search": "asst_ng9M9u5LxGxlXBUCaZKhyvkv",
-    "verification": "asst_PADQfc0mgy2bRwPSxqfSgoLK",
-    "talk": "asst_QTqOXlgXFLq1rttQZWZJVvQx",
-    "text": "asst_g7xj6OdPdIld525AetsKltFr"
+    "search": "Search agent ID",
+    "verification": "Verification agent ID",
+    "talk": "Talk Agent ID",
+    "text": "Text Agent ID"
 }
 
 class AgentManager:
