@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+jinja2
+python-dotenv
+azure-identity
+azure-ai-projects
+semantic-kernel
+aiohttp
+gunicorn
