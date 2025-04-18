@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/marked@latest/marked.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="speech-key" content="{{ speech_key }}" />
+    <meta name="speech-region" content="{{ speech_region }}" />
+    <title>Azure AI Avatar Chat</title>
+    <script src="https://cdn.jsdelivr.net/npm/microsoft-cognitiveservices-speech-sdk@latest/distrib/browser/microsoft.cognitiveservices.speech.sdk.bundle-min.js"></script>
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/github.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/lib/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.1/dist/purify.min.js"></script>
+  </head>
+  <body>
+    <h1 id="pageTitle">Azure AI Avatar Chat</h1>
+
+    <div class="container">
+      <div class="main-container">
+        <div id="videoContainer">
+          <div id="remoteVideo"></div>
+          <div id="subtitles" class="hidden"></div>
+        </div>
+
+        <div class="chat-container">
+          <div id="chatHistory"></div>
+          <div class="input-area">
+            <textarea
+              id="userInput"
+              placeholder="질문을 입력하세요..."
+            ></textarea>
+            <button id="sendButton">전송</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="startSessionButton">아바타 세션 시작</button>
+        <button id="stopSessionButton" disabled>세션 중지</button>
+        <button id="stopSpeakingButton" disabled>말하기 중지</button>
+        <button id="clearChatButton">대화 내역 지우기</button>
+        <div class="loader" id="loader"></div>
+      </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+  </body>
+</html>
